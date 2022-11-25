@@ -82,11 +82,17 @@ M.config = function()
       [";"] = { "<cmd>Alpha<CR>", "Dashboard" },
       ["w"] = { "<cmd>w!<CR>", "Save" },
       ["q"] = { "<cmd>lua require('lvim.utils.functions').smart_quit()<CR>", "Quit" },
+      ["Q"] = { "<cmd>qa!<CR>", "Quit All" },
       ["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment toggle" },
+      ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
       ["c"] = { "<cmd>BufferKill<CR>", "Close Buffer" },
       ["f"] = { require("lvim.core.telescope.custom-finders").find_project_files, "Find File" },
       ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
-      b = {
+      ["b"] = {
+        "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
+        "Buffers",
+      },
+      B = {
         name = "Buffers",
         j = { "<cmd>BufferLinePick<cr>", "Jump" },
         f = { "<cmd>Telescope buffers<cr>", "Find" },
@@ -270,6 +276,16 @@ M.config = function()
       T = {
         name = "Treesitter",
         i = { ":TSConfigInfo<cr>", "Info" },
+      },
+      t = {
+        name = "Terminal",
+        n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
+        u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
+        t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
+        p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
+        f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
+        h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
+        v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
       },
     },
   }
