@@ -86,7 +86,8 @@ M.config = function()
       ["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment toggle" },
       ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
       ["c"] = { "<cmd>BufferKill<CR>", "Close Buffer" },
-      ["f"] = { require("lvim.core.telescope.custom-finders").find_project_files, "Find File" },
+      ["f"] = { "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false, hidden = true, no_ignore = true})<cr>",
+		"Find files", },
       ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
       ["b"] = {
         "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
