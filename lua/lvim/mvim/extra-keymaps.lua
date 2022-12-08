@@ -37,6 +37,11 @@ keymap("v", "mm", "^", opts)
 keymap("v", "ml", "$", opts)
 keymap("v", "mk", "gg", opts)
 keymap("v", "mj", "G", opts)
+-- Half page center -- 
+keymap("n", "<C-d>", "<C-d>zz", opts)
+keymap("n", "<C-u>", "<C-u>zz", opts)
+keymap("v", "<C-d>", "<C-d>zz", opts)
+keymap("v", "<C-u>", "<C-u>zz", opts)
 
 -- Move text up and down --
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
@@ -48,6 +53,8 @@ keymap("i", "jk", "<ESC>", opts)
 keymap("i", "kj", "<ESC>", opts)
 keymap("i", "JK", "<ESC>", opts)
 keymap("i", "KJ", "<ESC>", opts)
+keymap("v", "jk", "<ESC>", opts)
+keymap("v", "kj", "<ESC>", opts)
 
 -- Visual --
 -- Stay in indent mode

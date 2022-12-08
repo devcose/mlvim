@@ -247,4 +247,13 @@ function M.define_autocmds(definitions)
   end
 end
 
+local toggle_numbers = vim.api.nvim_create_augroup("hybridNumbers", {clear = true})
+vim.api.nvim_create_autocmd("InsertEnter", { command = "set norelativenumber", group = toggle_numbers})
+vim.api.nvim_create_autocmd("InsertLeave", { command = "set relativenumber", group = toggle_numbers})
+-- set number relativenumber
+-- augroup numbertoggle
+-- autocmd!
+-- autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+-- autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
+-- augroup END
 return M
