@@ -22,6 +22,7 @@ local core_plugins = {
     "lunarvim/lunar.nvim",
   },
   { "Tastyep/structlog.nvim" },
+  { "eddiebergman/nvim-treesitter-pyfold"},
 
   { "nvim-lua/popup.nvim" },
   { "nvim-lua/plenary.nvim" },
