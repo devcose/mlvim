@@ -26,6 +26,8 @@ local core_plugins = {
 
   { "nvim-lua/popup.nvim" },
   { "nvim-lua/plenary.nvim" },
+  -- Prettier
+  { "MunifTanjim/prettier.nvim" },
   -- Telescope
   {
     "nvim-telescope/telescope.nvim",

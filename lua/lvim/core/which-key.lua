@@ -185,6 +185,7 @@ M.config = function()
         d = { "<cmd>Telescope diagnostics bufnr=0 theme=get_ivy<cr>", "Buffer Diagnostics" },
         w = { "<cmd>Telescope diagnostics<cr>", "Diagnostics" },
         f = { require("lvim.lsp.utils").format, "Format" },
+        p = { "<cmd>Prettier <cr>", "Prettier format" },
         i = { "<cmd>LspInfo<cr>", "Info" },
         I = { "<cmd>Mason<cr>", "Mason Info" },
         j = {
