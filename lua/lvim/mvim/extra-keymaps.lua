@@ -85,3 +85,5 @@ keymap("v", "<C-/>", "gc", opts)
 
 -- Insert --
 keymap("i", "<C-z>", "<Esc>:undo<CR>", opts)
+vim.g.copilot_no_tab_map = true
+vim.api.nvim_set_keymap("i", "<C-a>", 'copilot#Accept("<CR>")', { silent = true, expr = true })

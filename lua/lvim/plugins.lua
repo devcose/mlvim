@@ -4,6 +4,7 @@ local core_plugins = {
   { "wbthomason/packer.nvim" },
   { "neovim/nvim-lspconfig" },
   { "tamago324/nlsp-settings.nvim" },
+  { "christoomey/vim-tmux-navigator" },
   {
     "jose-elias-alvarez/null-ls.nvim",
   },
@@ -83,6 +84,9 @@ local core_plugins = {
   },
   {
     "saadparwaiz1/cmp_luasnip",
+  },
+  {
+    "github/copilot.vim",
   },
   {
     "hrsh7th/cmp-buffer",
