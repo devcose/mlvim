@@ -3,7 +3,9 @@ local core_plugins = {
   -- Packer can manage itself as an optional plugin
   { "wbthomason/packer.nvim" },
   { "neovim/nvim-lspconfig" },
+  { "hashivim/vim-terraform" },
   { "tamago324/nlsp-settings.nvim" },
+  { "norcalli/nvim-colorizer.lua" },
   { "christoomey/vim-tmux-navigator" },
   {
     "jose-elias-alvarez/null-ls.nvim",
@@ -117,6 +119,7 @@ local core_plugins = {
       require("lvim.core.treesitter").setup()
     end,
   },
+
   {
     "JoosepAlviste/nvim-ts-context-commentstring",
     event = "BufReadPost",
@@ -289,6 +292,8 @@ local core_plugins = {
     end,
     disable = lvim.colorscheme ~= "onedarker",
   },
+  { "iamcco/markdown-preview.nvim"},
+  { "towolf/vim-helm"},
 }
 
 local default_snapshot_path = join_paths(get_lvim_base_dir(), "snapshots", "default.json")

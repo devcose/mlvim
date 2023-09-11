@@ -72,6 +72,10 @@ function M.common_on_attach(client, bufnr)
   if lvim.lsp.code_lens_refresh then
     lu.setup_codelens_refresh(client, bufnr)
   end
+  -- Check if the buftype is not empty or if the filetype is "helm"
+  if vim.bo[bufnr].buftype ~= "" or vim.bo[bufnr].filetype == "helm" then
+      vim.diagnostic.disable(bufnr)
+  end
   add_lsp_buffer_keybindings(bufnr)
   add_lsp_buffer_options(bufnr)
   lu.setup_document_symbols(client, bufnr)

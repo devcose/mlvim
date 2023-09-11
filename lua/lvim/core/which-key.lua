@@ -96,6 +96,8 @@ M.config = function()
       },
       B = {
         name = "Buffers",
+        a = { "<cmd>bufdo bd<cr>", "close all" },
+        c = { "<cmd>bufdo e | bd #<cr>", "close all but current" },
         j = { "<cmd>BufferLinePick<cr>", "Jump" },
         f = { "<cmd>Telescope buffers<cr>", "Find" },
         b = { "<cmd>BufferLineCyclePrev<cr>", "Previous" },

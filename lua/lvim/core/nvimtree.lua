@@ -176,7 +176,7 @@ function M.setup()
       { key = { "l", "<CR>", "o" }, action = "edit", mode = "n" },
       { key = "h", action = "close_node" },
       { key = "v", action = "vsplit" },
-      { key = "C", action = "cd" },
+      { key = "m", action = "cd" },
       { key = "gtf", action = "telescope_find_files", action_cb = telescope_find_files },
       { key = "gtg", action = "telescope_live_grep", action_cb = telescope_live_grep },
     }
