@@ -81,6 +81,7 @@ M.config = function()
     mappings = {
       [";"] = { "<cmd>Alpha<CR>", "Dashboard" },
       ["w"] = { "<cmd>w!<CR>", "Save" },
+      ["o"] = { "<cmd>tabnew %<CR>", "Open fullscreen" },
       ["q"] = { "<cmd>lua require('lvim.utils.functions').smart_quit()<CR>", "Quit" },
       ["Q"] = { "<cmd>qa!<CR>", "Quit All" },
       ["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment toggle" },

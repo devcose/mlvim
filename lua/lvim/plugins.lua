@@ -91,6 +91,9 @@ local core_plugins = {
     "github/copilot.vim",
   },
   {
+    "f-person/git-blame.nvim",
+  },
+  {
     "hrsh7th/cmp-buffer",
   },
   {
